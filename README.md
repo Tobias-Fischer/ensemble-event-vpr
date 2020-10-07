@@ -1,6 +1,8 @@
 # Event-Based Visual Place Recognition With Ensembles of Temporal Windows
 
-[![QUT Centre for Robotics Open Source](https://github.com/qcr/qcr.github.io/blob/master/misc/badge.svg)](https://qcr.github.io)
+<p align="center">
+  <a href="https://qcr.github.io" alt="QUT Centre for Robotics Open Source"><img src="https://github.com/qcr/qcr.github.io/blob/master/misc/badge.svg" /></a>
+</p>
 
 We are still preparing the code for public release. In the meantime, please contact tobias.fischer@qut.edu.au if you are interested in the code.
 
