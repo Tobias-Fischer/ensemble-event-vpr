@@ -5,7 +5,7 @@
 [![stars](https://img.shields.io/github/stars/Tobias-Fischer/ensemble-event-vpr.svg?style=flat-square)](https://github.com/Tobias-Fischer/ensemble-event-vpr/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Tobias-Fischer/ensemble-event-vpr?style=flat-square)](https://github.com/Tobias-Fischer/ensemble-event-vpr/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Tobias-Fischer/ensemble-event-vpr.svg?style=flat-square)](./README.md)
-<a href="https://qcr.github.io" alt="QUT Centre for Robotics Open Source"><img src="https://github.com/qcr/qcr.github.io/blob/master/misc/badge.svg?style=flat-square" /></a>
+<a href="https://qcr.github.io" alt="QUT Centre for Robotics Open Source"><img src="https://img.shields.io/badge/collection-QUT%20Robotics-%23043d71?style=flat-square" /></a>
 
 ### License + Attribution
 The RT-GENE code is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial usage is not permitted. If you use this dataset or the code in a scientific publication, please cite the following [paper](http://doi.org/10.1109/LRA.2020.3025505) ([preprint and additional material](https://arxiv.org/abs/2006.02826)):
