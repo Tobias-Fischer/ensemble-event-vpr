@@ -1,5 +1,6 @@
 import pynmea2
 
+
 def get_gps(nmea_file_path):
     nmea_file = open(nmea_file_path, encoding='utf-8')
 
@@ -29,19 +30,11 @@ def get_gps(nmea_file_path):
     return np.array(np.vstack((latitudes, longitudes, timestamps))).T
 
 
-def smooth_gps(in_gps):
-    N = 3
-    out_lat = np.convolve(in_gps[:, 0], np.ones((N,)) / N, mode='valid')
-    out_lon = np.convolve(in_gps[:, 1], np.ones((N,)) / N, mode='valid')
-    out_t = np.convolve(in_gps[:, 2], np.ones((N,)) / N, mode='valid')
-    return np.vstack((out_lat, out_lon, out_t)).T
+nmea_path_1 = 'traverse1.nmea'
+nmea_path_2 = 'traverse2.nmea'
 
-
-vid_path_1 = 'traverse1.mp4'
-vid_path_2 = 'traverse2.mp4'
-
-x1 = get_gps(vid_path_1.replace(mov_file.split('.')[-1], 'nmea'))
-x2 = get_gps(vid_path_2.replace(mov_file.split('.')[-1], 'nmea'))
+x1 = get_gps(nmea_path_1)
+x2 = get_gps(nmea_path_2)
 
 match_x1_to_x2 = []
 for idx1, (latlon, t) in enumerate(zip(x1[:, 0:2], x1[:, 2])):
