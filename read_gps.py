@@ -1,4 +1,5 @@
 import pynmea2
+import numpy as np
 
 
 def get_gps(nmea_file_path):
@@ -28,31 +29,3 @@ def get_gps(nmea_file_path):
             continue
 
     return np.array(np.vstack((latitudes, longitudes, timestamps))).T
-
-
-nmea_path_1 = 'traverse1.nmea'
-nmea_path_2 = 'traverse2.nmea'
-
-x1 = get_gps(nmea_path_1)
-x2 = get_gps(nmea_path_2)
-
-match_x1_to_x2 = []
-for idx1, (latlon, t) in enumerate(zip(x1[:, 0:2], x1[:, 2])):
-    if len(match_x1_to_x2) < 6:
-        min_idx2 = 0
-        max_idx2 = int(0.25 * len(x2))
-    elif idx1 > 0.5 * len(x1):
-        min_idx2 = match_x1_to_x2[-5]
-        max_idx2 = len(x2)
-    else:
-        min_idx2 = match_x1_to_x2[-5]
-        max_idx2 = int(0.75 * len(x2))
-    best_match = (np.linalg.norm(x2[min_idx2:max_idx2, 0:2] - latlon, axis=1)).argmin() + min_idx2
-    # print('%d %.4f' % (idx1, np.linalg.norm(x2[best_match, 0:2] - latlon)))
-    match_x1_to_x2.append(best_match)
-match_x1_to_x2 = np.array(match_x1_to_x2)
-
-t_raw1 = x1[:, 2]
-t_raw2 = x2[match_x1_to_x2, 2]
-timestamps_gps1 = np.array([t + video_beginning[traverse_to_name[comparison_id_no_suffix_traverse1]] for t in t_raw1])
-timestamps_gps2 = np.array([t + video_beginning[traverse_to_name[comparison_id_no_suffix_traverse2]] for t in t_raw2])
