@@ -47,6 +47,14 @@ Please note that in our paper we used manually annotated and then interpolated c
 
 1. Now do the event to video conversion: `python reconstruct_videos.py`. Make sure to adjust the path to the `run_reconstruction.py` file from the rpg_e2vid repository.
 
+## Create suitable conda environment
+1. Create a new conda environment with the dependencies: `conda create --name brisbaneeventvpr tensorflow-gpu pynmea2 scipy matplotlib numpy tqdm jupyterlab opencv pip ros-noetic-rosbag ros-noetic-cv-bridge python=3.8 -c conda-forge -c robostack`
+
+## Export RGB frames from rosbags
+1. `conda activate brisbaneeventvpr`
+
+1. `python export_frames_from_rosbag.py`
+
 ## Event-based VPR with ensembles
 1. Create a new conda environment with the dependencies: `conda create --name brisbaneeventvpr tensorflow-gpu pynmea2 scipy matplotlib numpy tqdm jupyterlab opencv pip`
 
