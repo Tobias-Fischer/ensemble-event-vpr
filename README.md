@@ -64,6 +64,8 @@ Please note that in our paper we used manually annotated and then interpolated c
 
 1. `cd netvlad_tf_open && pip install -e .`
 
+1. Download the NetVLAD checkpoint [here](http://rpg.ifi.uzh.ch/datasets/netvlad/vd16_pitts30k_conv5_3_vlad_preL2_intra_white.zip) (1.1 GB). Extract the zip and move its contents to the checkpoints folder of the `netvlad_tf_open` repository.
+
 1. Open the [Brisbane Event VPR.ipynb](./Brisbane%20Event%20VPR.ipynb) and adjust the path to the `dataset_folder`.
 
 1. You can now run the code in [Brisbane Event VPR.ipynb](./Brisbane%20Event%20VPR.ipynb).
