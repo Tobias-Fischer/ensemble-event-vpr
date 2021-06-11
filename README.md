@@ -69,3 +69,6 @@ Please note that in our paper we used manually annotated and then interpolated c
 1. Open the [Brisbane Event VPR.ipynb](./Brisbane%20Event%20VPR.ipynb) and adjust the path to the `dataset_folder`.
 
 1. You can now run the code in [Brisbane Event VPR.ipynb](./Brisbane%20Event%20VPR.ipynb).
+
+# Related works
+Please check out [this collection](https://qcr.github.io/collection/vpr_overview/) of related works on place recognition.
